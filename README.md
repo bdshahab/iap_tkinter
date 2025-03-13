@@ -1,6 +1,6 @@
 # In-app purchasing by cryptocurrency
 
-(It's not a plugin!)
+(This is a sample program not a library!)
 
 <img width="859" alt="1" src="https://github.com/bdshahab/in-app-purchasing-by-crypto/assets/17976016/e7ee57fe-dc7a-401c-8395-848e584e5ec8">
 
