@@ -190,7 +190,7 @@ def update():
 def start_timer():
     try:
         if not get_latest_key_data():
-            messagebox.showerror(TITLE_EMPTY_TXID, MESSAGE_EMPTY_TXID)
+            messagebox.showerror(TITLE_PAYMENT_VERSION, MESSAGE_PAYMENT_VERSION)
         global carry_on, timer_id
         carry_on = True
         if timer_id is not None:
