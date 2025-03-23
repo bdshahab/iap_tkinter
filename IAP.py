@@ -144,7 +144,6 @@ prev_button.pack(side="left", fill="x")
 selected_coin.pack(side="left", expand=True)
 next_button.pack(side="left", fill="x")
 
-
 # TODO ************Payment************
 # Global variables
 time_in_seconds = TOTAL_TIME
@@ -213,10 +212,9 @@ def start_timer():
             on_back_payment()
             messagebox.showwarning(
                 TITLE_ANOTHER_CURRENCY, MESSAGE_ANOTHER_CURRENCY)
-        if TESTING:
+        elif TESTING:
             print("First Time format: " + first_clock_now)
             print("First Date format: " + first_date_now)
-    # except (requests.exceptions.ConnectionError, ValueError):
     except requests.exceptions.ConnectionError:
         on_back_payment()
         messagebox.showwarning(TITLE_LOST_CONNECTION, MESSAGE_LOST_CONNECTION)
