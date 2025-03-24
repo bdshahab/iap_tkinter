@@ -35,21 +35,21 @@ urls = {
     "Zcash (ZEC)": "https://zecblockexplorer.com/tx/"
 }
 # List of cryptocurrency names
-cryptos = [
-    ("Bitcoin (BTC)", "Payment/Photos/bitcoin (btc).png"),
-    ("Bitcoin Cash (BCH)", "Payment/Photos/bitcoin cash (bch).png"),
-    ("Bitcoin Gold (BTG)", "Payment/Photos/bitcoin gold (btg).png"),
-    ("Dash (DASH)", "Payment/Photos/dash (dash).png"),
-    ("DigiByte (DGB)", "Payment/Photos/digibyte (dgb).png"),
-    ("Dogecoin (DOGE)", "Payment/Photos/dogecoin (doge).png"),
-    ("Ethereum (ETH)", "Payment/Photos/ethereum (eth).png"),
-    ("Firo (FIRO)", "Payment/Photos/firo (firo).png"),
-    ("Komodo (KMD)", "Payment/Photos/komodo (kmd).png"),
-    ("Litecoin (LTC)", "Payment/Photos/litecoin (ltc).png"),
-    ("Qtum (QTUM)", "Payment/Photos/qtum (qtum).png"),
-    ("Ravencoin (RVN)", "Payment/Photos/ravencoin (rvn).png"),
-    ("Reddcoin (RDD)", "Payment/Photos/reddcoin (rdd).png"),
-    ("Verge (XVG)", "Payment/Photos/verge (xvg).png"),
-    ("Vertcoin (VTC)", "Payment/Photos/vertcoin (vtc).png"),
-    ("Zcash (ZEC)", "Payment/Photos/zcash (zec).png"),
-]
+cryptos = {
+    "Bitcoin (BTC)": "Payment/Photos/bitcoin (btc).png",
+    "Bitcoin Cash (BCH)": "Payment/Photos/bitcoin cash (bch).png",
+    "Bitcoin Gold (BTG)": "Payment/Photos/bitcoin gold (btg).png",
+    "Dash (DASH)": "Payment/Photos/dash (dash).png",
+    "DigiByte (DGB)": "Payment/Photos/digibyte (dgb).png",
+    "Dogecoin (DOGE)": "Payment/Photos/dogecoin (doge).png",
+    "Ethereum (ETH)": "Payment/Photos/ethereum (eth).png",
+    "Firo (FIRO)": "Payment/Photos/firo (firo).png",
+    "Komodo (KMD)": "Payment/Photos/komodo (kmd).png",
+    "Litecoin (LTC)": "Payment/Photos/litecoin (ltc).png",
+    "Qtum (QTUM)": "Payment/Photos/qtum (qtum).png",
+    "Ravencoin (RVN)": "Payment/Photos/ravencoin (rvn).png",
+    "Reddcoin (RDD)": "Payment/Photos/reddcoin (rdd).png",
+    "Verge (XVG)": "Payment/Photos/verge (xvg).png",
+    "Vertcoin (VTC)": "Payment/Photos/vertcoin (vtc).png",
+    "Zcash (ZEC)": "Payment/Photos/zcash (zec).png",
+}
