@@ -110,17 +110,18 @@ frame.pack()
 frame.config(bg="white")
 
 # Creating buttons with cryptocurrency logos
-for index, (name, img_path) in enumerate(cryptos):
+index = 0
+for k, v in cryptos.items():
     # Load and resize the image
-    img_selected_coin = Image.open(img_path).resize((50, 50))
+    img_selected_coin = Image.open(v).resize((50, 50))
     photo = ImageTk.PhotoImage(img_selected_coin)
 
     # Create button
     btn = tk.Button(frame, image=str(photo),
-                    command=lambda n=name: on_crypto_click(n))
+                    command=lambda n=k: on_crypto_click(n))
     btn.image = photo  # Save reference to avoid garbage collection
     btn.grid(row=index // 4, column=index % 4, padx=10, pady=10)
-
+    index += 1
 
 frame_bottom = tk.Frame(tab2)
 frame_bottom.pack(fill="both", expand=True)
