@@ -4,7 +4,7 @@ from tkinter import ttk, messagebox
 from tools.for_images import *
 from tools.for_time import *
 from About.about import *
-from tools.iap_variables import *
+from Payment.iap_variables import *
 from Payment.web_functions import *
 
 TESTING = False
