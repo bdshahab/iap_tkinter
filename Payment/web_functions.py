@@ -155,7 +155,10 @@ def get_coin_current_price(the_coin):
     price_site_middle = get_coin_symbol(the_coin)
     coin_url_price = (PRICE_SITE + PRICE_SITE_PREFIX +
                       price_site_middle + PRICE_SITE_SUFFIX)
-    current_price = get_current_price_from_the_url(coin_url_price)
+    try:
+        current_price = get_current_price_from_the_url(coin_url_price)
+    except Exception:
+        current_price = get_coin_default_price(the_coin)
     return get_just_number(current_price)
 
 
