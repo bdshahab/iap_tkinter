@@ -7,7 +7,7 @@ Set its parameter to "true" to test.
 Also, the payment type must be Litecoin.
 https://litecoinblockexplorer.net/tx/61a7667851da2d1395c26f4eaba7a14a3c1355ba80e1b35678327619a115d21e
 """
-TESTING = not False
+TESTING = False
 PRICE_TEST_IS_OK = False
 DATE_TEST_IS_OK = False
 TIME_TEST_IS_OK = False
@@ -23,6 +23,8 @@ TITLE_PAYMENT_VERSION = "Use a newer version"
 MESSAGE_PAYMENT_VERSION = "This payment method is not working anymore! Please download a new version of this program or contact the support section."
 TITLE_EXACT_PRICE = "Price error"
 MESSAGE_EXACT_PRICE = "You haven't paid exact price! Pay the amount not less or more before time runs out and enter its TXID."
+TITLE_SERVER_ERROR = "Server error"
+MESSAGE_SERVER_ERROR = "The verify server has been down! Please try again later."
 TITLE_ANOTHER_ADDRESS = "Address error"
 MESSAGE_ANOTHER_ADDRESS = "Your payment receipt was sent to another address and is not acceptable."
 TITLE_ANOTHER_CURRENCY = "Digital currency error"
