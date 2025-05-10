@@ -188,10 +188,23 @@ def update():
         timer_id = root.after(1000, update)
 
 
+def is_verify_site_ok():
+    response = requests.get(get_verify_url_coin(
+        Global.selected_payment).split(VERIFY_SITE_SEPARATOR)[0])
+    if SERVER_DOWN_KEY in response.text:
+        return False
+    if response.status_code == 200:
+        return True
+    else:
+        # ERROR for accessing the server like 403
+        return False
+
+
 def start_timer():
     try:
         if not get_latest_key_data():
-            messagebox.showerror(TITLE_PAYMENT_VERSION, MESSAGE_PAYMENT_VERSION)
+            messagebox.showerror(TITLE_PAYMENT_VERSION,
+                                 MESSAGE_PAYMENT_VERSION)
         global carry_on, timer_id
         carry_on = True
         if timer_id is not None:
@@ -216,6 +229,10 @@ def start_timer():
         elif TESTING:
             print("First Time format: " + first_clock_now)
             print("First Date format: " + first_date_now)
+        # Check if verify site is down or not
+        if not is_verify_site_ok():
+            on_back_payment()
+            messagebox.showwarning(TITLE_SERVER_ERROR, MESSAGE_SERVER_ERROR)
     except requests.exceptions.ConnectionError:
         on_back_payment()
         messagebox.showwarning(TITLE_LOST_CONNECTION, MESSAGE_LOST_CONNECTION)
