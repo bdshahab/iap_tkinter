@@ -41,6 +41,9 @@ MONEY_PREFIX = ">"
 MONEY_SUFFIX = " "
 DATE_PREFIX = ", "
 DATE_SUFFIX = " "
+# To check if verify site is down or not
+VERIFY_SITE_SEPARATOR = "/tx/"
+SERVER_DOWN_KEY = ">Backend Error</p>"
 
 
 def get_latest_key_data():
