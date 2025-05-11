@@ -6,6 +6,7 @@ from tools.for_time import *
 from About.about import *
 from Payment.iap_variables import *
 from Payment.web_functions import *
+from tools.Tooltip import *
 
 TESTING = False
 
@@ -351,6 +352,9 @@ def set_selected_coin_icon():
         label_image = tk.Label(row1_frame, bg="#cbcbcb", image=str(img_tk))
         label_image.grid(row=0, column=0, sticky="w", padx=5)
         label_image.image = img_tk  # Keep a reference to prevent garbage collection
+        import tools.Normal_ToolTip as Normal_ToolTip
+        Normal_ToolTip.ToolTip(
+            label_image, Global.selected_payment, "white", "black")
 
 
 def on_back_payment():
