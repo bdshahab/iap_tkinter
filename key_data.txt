@@ -15,11 +15,11 @@ lower
 -
 /address/
 ">
->
-<
->
+/transaction/
+"
+
+</span>&nbsp;
+data-time>
  
-, 
- 
-/tx/
->Backend Error</p>
+/transaction/
+https://blockchair.com
