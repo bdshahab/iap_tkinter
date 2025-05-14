@@ -41,35 +41,35 @@ the_coins = (
 
 other_vars = {
     # To get the current Date & Time
-    "DATE_TIME_SITE": "https://unixtime.org" + "CIA",
+    "DATE_TIME_SITE": "https://unixtime.org",
     # We use this one for DATE_TIME_SITE
-    "TIME_REGEX": "([0-2][0-9]:[0-5][0-9]:[0-5][0-9])" + "CIA",
-    "DATE_REGEX": '([0-9]{1,2}-[A-Za-z]{3}-[0-9]{4})' + "CIA",
-    "DATE_REMOVE": "-" + "CIA",
-    "DATE_REPLACE": " " + "CIA",
+    "TIME_REGEX": "([0-2][0-9]:[0-5][0-9]:[0-5][0-9])",
+    "DATE_REGEX": '([0-9]{1,2}-[A-Za-z]{3}-[0-9]{4})',
+    "DATE_REMOVE": "-",
+    "DATE_REPLACE": " ",
     # We use this time for verifying time in the receipt of payment
-    "CLOCK_REGEX": "([0-2][0-9]:[0-5][0-9]:[0-5][0-9])" + "CIA",
+    "CLOCK_REGEX": "([0-2][0-9]:[0-5][0-9]:[0-5][0-9])",
     # To get the current price of coins
-    "PRICE_SITE": "https://cryptorank.io/price/" + "CIA",
-    "PRICE_SITE_REGEX": 'Price \\$ ([0-9,]+\\.?[0-9]*), Trading Volume' + "CIA",
-    "PRICE_SITE_PREFIX": "" + "CIA",
-    "PRICE_SITE_SUFFIX": "" + "CIA",
-    "COIN_REGEX_1": '\\([^%(]+\\)' + "CIA",
-    "COIN_REGEX_2": "" + "CIA",
+    "PRICE_SITE": "https://cryptorank.io/price/",
+    "PRICE_SITE_REGEX": 'Price \\$ ([0-9,]+\\.?[0-9]*), Trading Volume',
+    "PRICE_SITE_PREFIX": "",
+    "PRICE_SITE_SUFFIX": "",
+    "COIN_REGEX_1": '\\([^%(]+\\)',
+    "COIN_REGEX_2": "",
     # "lower" -- upper if uppercase and lower if lowercase and nothing("") for none
-    "COIN_UPPER_LOWER": "lower" + "CIA",
-    "COIN_REGEX_SEPARATOR": "-" + "CIA",
+    "COIN_UPPER_LOWER": "lower",
+    "COIN_REGEX_SEPARATOR": "-",
     # To get the validation of payment
-    "ADDRESS_PREFIX": "/address/" + "CIA",
-    "ADDRESS_SUFFIX": "\">" + "CIA",
-    "TXID_PREFIX": "/transaction/" + "CIA",
-    "TXID_SUFFIX": "\"" + "CIA",
-    "MONEY_PREFIX": "" + "CIA",
-    "MONEY_SUFFIX": "</span>&nbsp;" + "CIA",
-    "DATE_PREFIX": "data-time>" + "CIA",
-    "DATE_SUFFIX": " " + "CIA",
-    "VERIFY_SITE": "https://blockchair.com" + "CIA",
-    "VERIFY_SITE_SEPARATOR": "/transaction/" + "CIA",
+    "ADDRESS_PREFIX": "/address/",
+    "ADDRESS_SUFFIX": "\">",
+    "TXID_PREFIX": "/transaction/",
+    "TXID_SUFFIX": "\"",
+    "MONEY_PREFIX": "",
+    "MONEY_SUFFIX": "</span>&nbsp;",
+    "DATE_PREFIX": "data-time>",
+    "DATE_SUFFIX": " ",
+    "VERIFY_SITE": "https://blockchair.com",
+    "VERIFY_SITE_SEPARATOR": "/transaction/",
 }
 
 TITLE_PAID = "You paid before!"
