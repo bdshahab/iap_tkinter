@@ -8,7 +8,7 @@ from Payment.iap_variables import *
 from Payment.web_functions import *
 from tools.Tooltip import *
 
-TESTING = False
+TESTING = not False
 
 first_clock_now = ""
 last_clock_now = ""
