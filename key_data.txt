@@ -23,3 +23,19 @@ data-time>
  
 /transaction/
 https://blockchair.com
+/avalanche
+/bnb
+/bitcoin
+/bitcoin-cash
+/cardano
+/dash
+/digibyte
+/dogecoin
+/ethereum
+/groestlcoin
+/litecoin
+/polkadot
+/solana
+/stellar
+/ton
+/tron
