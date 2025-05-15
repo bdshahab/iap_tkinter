@@ -19,64 +19,19 @@ addresses = {
     vars.the_coins[15]: "TEivYaNov8LERnBaTJiry8K9m7u46Mxs86",
 }
 
-urls = {
-    vars.the_coins[0]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[0]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-    vars.the_coins[1]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[1]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-    vars.the_coins[2]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[2]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-    vars.the_coins[3]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[3]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-    vars.the_coins[4]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[4]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-    vars.the_coins[5]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[5]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-    vars.the_coins[6]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[6]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-    vars.the_coins[7]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[7]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-    vars.the_coins[8]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[8]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-    vars.the_coins[9]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[9]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-    vars.the_coins[10]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[10]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-    vars.the_coins[11]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[11]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-    vars.the_coins[12]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[12]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-    vars.the_coins[13]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[13]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-    vars.the_coins[14]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[14]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-    vars.the_coins[15]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[15]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-}
+urls = {}
+for coin in vars.the_coins:
+    urls[coin] = vars.other_vars["VERIFY_SITE"] + \
+        vars.other_vars[coin] + vars.other_vars["VERIFY_SITE_SEPARATOR"]
 
 
 def update_urls():
     urls.clear()
-    urls.update({
-        vars.the_coins[0]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[0]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-        vars.the_coins[1]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[1]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-        vars.the_coins[2]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[2]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-        vars.the_coins[3]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[3]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-        vars.the_coins[4]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[4]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-        vars.the_coins[5]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[5]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-        vars.the_coins[6]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[6]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-        vars.the_coins[7]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[7]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-        vars.the_coins[8]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[8]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-        vars.the_coins[9]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[9]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-        vars.the_coins[10]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[10]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-        vars.the_coins[11]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[11]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-        vars.the_coins[12]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[12]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-        vars.the_coins[13]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[13]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-        vars.the_coins[14]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[14]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-        vars.the_coins[15]: vars.other_vars["VERIFY_SITE"] + vars.other_vars[vars.the_coins[15]] + vars.other_vars["VERIFY_SITE_SEPARATOR"],
-    })
+    for coin in vars.the_coins:
+        urls[coin] = vars.other_vars["VERIFY_SITE"] + \
+            vars.other_vars[coin] + vars.other_vars["VERIFY_SITE_SEPARATOR"]
 
 
-# List of cryptocurrency names
-cryptos = {
-    vars.the_coins[0]: "Payment/Photos/avalanche (avax).png",
-    vars.the_coins[1]: "Payment/Photos/binance coin (bnb).png",
-    vars.the_coins[2]: "Payment/Photos/bitcoin (btc).png",
-    vars.the_coins[3]: "Payment/Photos/bitcoin cash (bch).png",
-    vars.the_coins[4]: "Payment/Photos/cardano (ada).png",
-    vars.the_coins[5]: "Payment/Photos/dash (dash).png",
-    vars.the_coins[6]: "Payment/Photos/digibyte (dgb).png",
-    vars.the_coins[7]: "Payment/Photos/dogecoin (doge).png",
-    vars.the_coins[8]: "Payment/Photos/ethereum (eth).png",
-    vars.the_coins[9]: "Payment/Photos/groestlcoin (grs).png",
-    vars.the_coins[10]: "Payment/Photos/litecoin (ltc).png",
-    vars.the_coins[11]: "Payment/Photos/polkadot (dot).png",
-    vars.the_coins[12]: "Payment/Photos/solana (sol).png",
-    vars.the_coins[13]: "Payment/Photos/stellar (xlm).png",
-    vars.the_coins[14]: "Payment/Photos/toncoin (ton).png",
-    vars.the_coins[15]: "Payment/Photos/tron (trx).png",
-}
+cryptos = {}
+for coin in vars.the_coins:
+    cryptos[coin] = f"Payment/Photos/{coin.lower()}.png"
