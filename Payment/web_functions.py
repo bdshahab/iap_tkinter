@@ -72,6 +72,38 @@ def get_latest_key_data():
             vars.other_vars["VERIFY_SITE_SEPARATOR"] = line
         elif num == 25:
             vars.other_vars["VERIFY_SITE"] = line
+        elif num == 26:
+            vars.other_vars[vars.the_coins[0]] = line
+        elif num == 27:
+            vars.other_vars[vars.the_coins[1]] = line
+        elif num == 28:
+            vars.other_vars[vars.the_coins[2]] = line
+        elif num == 29:
+            vars.other_vars[vars.the_coins[3]] = line
+        elif num == 30:
+            vars.other_vars[vars.the_coins[4]] = line
+        elif num == 31:
+            vars.other_vars[vars.the_coins[5]] = line
+        elif num == 32:
+            vars.other_vars[vars.the_coins[6]] = line
+        elif num == 33:
+            vars.other_vars[vars.the_coins[7]] = line
+        elif num == 34:
+            vars.other_vars[vars.the_coins[8]] = line
+        elif num == 35:
+            vars.other_vars[vars.the_coins[9]] = line
+        elif num == 36:
+            vars.other_vars[vars.the_coins[10]] = line
+        elif num == 37:
+            vars.other_vars[vars.the_coins[11]] = line
+        elif num == 38:
+            vars.other_vars[vars.the_coins[12]] = line
+        elif num == 39:
+            vars.other_vars[vars.the_coins[13]] = line
+        elif num == 40:
+            vars.other_vars[vars.the_coins[14]] = line
+        elif num == 41:
+            vars.other_vars[vars.the_coins[15]] = line
         num = num + 1
     update_urls()
     return True
