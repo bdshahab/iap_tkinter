@@ -12,12 +12,12 @@ Python (PySide6): https://github.com/bdshahab/iap_qt
 
 Python (tkinter): https://github.com/bdshahab/iap_tkinter
 
-<img width="859" alt="1" src="https://raw.githubusercontent.com/bdshahab/in-app-purchasing-by-crypto/refs/heads/main/pyside6_1.png">
+<img width="859" alt="1" src="https://raw.githubusercontent.com/bdshahab/in-app-purchasing-by-crypto/refs/heads/main/tkinter_1.png">
 
 
 A simple way to enable in-app purchases using cryptocurrencies.
 
-<img width="866" alt="2" src="https://raw.githubusercontent.com/bdshahab/in-app-purchasing-by-crypto/refs/heads/main/pyside6_2.png">
+<img width="866" alt="2" src="https://raw.githubusercontent.com/bdshahab/in-app-purchasing-by-crypto/refs/heads/main/tkinter_2.png">
 
 
 A video clip about this method:
