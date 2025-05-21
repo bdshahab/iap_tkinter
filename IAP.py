@@ -304,7 +304,7 @@ def on_buy_click():
                     selected_coin["text"], price, txid, first_date_now, last_date_now, first_clock_now, last_clock_now)
                 if verify_result == "OK":
                     payment_successful()
-                if time_in_seconds < 0:
+                elif time_in_seconds < 0:
                     on_back_payment()
                 elif verify_result == "ADDRESS":
                     messagebox.showwarning(
