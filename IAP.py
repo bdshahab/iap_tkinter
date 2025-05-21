@@ -1,4 +1,5 @@
 import sys
+import time
 import Global
 from tkinter import ttk, messagebox
 from tools.for_images import *
@@ -7,6 +8,8 @@ from About.about import *
 from Payment.iap_variables import *
 from Payment.web_functions import *
 from tools.Tooltip import *
+import tools.for_time as for_time
+
 
 TESTING = False
 
@@ -150,7 +153,7 @@ next_button.pack(side="left", fill="x")
 # Global variables
 time_in_seconds = TOTAL_TIME
 timer_id = None  # Initialize timer_id to None
-text = get_display_time(time_in_seconds)
+text = for_time.get_display_time(time_in_seconds)
 carry_on = False
 
 
@@ -158,16 +161,23 @@ def reset_timer():
     global text, carry_on, timer_id, time_in_seconds
     carry_on = False
     time_in_seconds = TOTAL_TIME
-    text = get_display_time(time_in_seconds)
+    text = for_time.get_display_time(time_in_seconds)
     label_timer.configure(text=text)  # Update label text immediately
     if timer_id is not None:
         root.after_cancel(str(timer_id))
     timer_id = None
+    for_time.start_time_in_system = 0
 
 
 def update():
+    """
+    This function updates every second, and we could also decrement the base time by 1 unit.
+    But if the window freezes, it will not run, and time will fall behind in real time!
+    So we use real-time difference to prevent that problem.
+    """
     global text, carry_on, timer_id, time_in_seconds
-    time_in_seconds -= 1
+    time_in_seconds = Global.TOTAL_TIME - \
+        (int(time.time()) - for_time.start_time_in_system)
 
     if time_in_seconds > 2 * (TOTAL_TIME / 3):
         label_timer.configure(fg="#0000ff")
@@ -178,11 +188,11 @@ def update():
 
     if time_in_seconds < 0:
         time_in_seconds = 0
-        text = get_display_time(time_in_seconds)
+        text = for_time.get_display_time(time_in_seconds)
         label_timer.configure(text=text)
         on_back_payment()
         return
-    text = get_display_time(time_in_seconds)
+    text = for_time.get_display_time(time_in_seconds)
     label_timer.configure(text=text)
     if carry_on:
         # schedule next update 1 second later
@@ -191,6 +201,7 @@ def update():
 
 def start_timer():
     try:
+        for_time.start_time_in_system = int(time.time())
         if not get_latest_key_data():
             messagebox.showerror(TITLE_PAYMENT_VERSION,
                                  MESSAGE_PAYMENT_VERSION)
