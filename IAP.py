@@ -11,8 +11,6 @@ from tools.Tooltip import *
 import tools.for_time as for_time
 
 
-TESTING = False
-
 first_clock_now = ""
 last_clock_now = ""
 first_date_now = ""
