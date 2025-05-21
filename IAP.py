@@ -176,7 +176,7 @@ def update():
     So we use real-time difference to prevent that problem.
     """
     global text, carry_on, timer_id, time_in_seconds
-    time_in_seconds = Global.TOTAL_TIME - \
+    time_in_seconds = TOTAL_TIME - \
         (int(time.time()) - for_time.start_time_in_system)
 
     if time_in_seconds > 2 * (TOTAL_TIME / 3):
@@ -306,6 +306,8 @@ def on_buy_click():
                     selected_coin["text"], price, txid, first_date_now, last_date_now, first_clock_now, last_clock_now)
                 if verify_result == "OK":
                     payment_successful()
+                if time_in_seconds < 0:
+                    on_back_payment()
                 elif verify_result == "ADDRESS":
                     messagebox.showwarning(
                         TITLE_ANOTHER_ADDRESS, MESSAGE_ANOTHER_ADDRESS)
