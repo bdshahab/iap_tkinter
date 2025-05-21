@@ -293,7 +293,7 @@ def verify_payment(the_coin, the_price, the_txid, the_first_date, the_last_date,
         the_time = get_registered_clock(the_txid_data)
         if not (check_address_in_txid_data(the_coin, the_txid_data)):
             return "ADDRESS"
-    except Exception as e:
+    except Exception:
         return "ADDRESS"
     try:
         result_first_date = (check_date_in_txid_data(
