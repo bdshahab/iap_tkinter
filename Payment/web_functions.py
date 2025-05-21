@@ -6,7 +6,7 @@ import Payment.iap_variables as vars
 # this one depends on selected coin
 price_site_middle = ""
 
-GITHUB = "https://raw.githubusercontent.com/bdshahab/iap_qt/main/"
+GITHUB = "https://raw.githubusercontent.com/bdshahab/iap_tkinter/main/"
 DEFAULT_PRICE_KEYWORD = "default%20prices/"
 DEFAULT_PRICE_SUFFIX = ".txt"
 KEY_DATA_SITE = GITHUB + "key_data.txt"
