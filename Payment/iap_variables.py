@@ -1,6 +1,6 @@
 """
 This program, through the website, checks the version of the program and if the version has not changed,
-it updates the necessary information.
+It updates the necessary information.
 You can test the program by activating the "test_IAP" function.
 Set its parameter to "true" to test.
 Also, the payment type must be Litecoin.
