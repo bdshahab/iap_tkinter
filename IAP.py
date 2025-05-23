@@ -201,32 +201,35 @@ def start_timer():
     try:
         for_time.start_time_in_system = int(time.time())
         if not get_latest_key_data():
+            notebook.select(0)
             messagebox.showerror(TITLE_PAYMENT_VERSION,
                                  MESSAGE_PAYMENT_VERSION)
-        global carry_on, timer_id
-        carry_on = True
-        if timer_id is not None:
-            root.after_cancel(str(timer_id))  # Cancel any existing timer
-        update()  # Call update immediately to avoid delay
-        address_input_var.set(addresses.get(selected_coin["text"]))
-        # set price of the app
-        the_price = APP_PRICE / \
-            float(get_coin_current_price(selected_coin["text"]))
-        price_input_var.set(f"{the_price:.8f}")
-        the_price = float(price_input_var.get())
-        txid_input_var.set("")
-        datetime_data = get_datetime_data()
-        global first_clock_now, first_date_now
-        first_clock_now = get_current_time(datetime_data)
-        first_date_now = get_current_date(datetime_data)
+            show_about(root)
+        else:
+            global carry_on, timer_id
+            carry_on = True
+            if timer_id is not None:
+                root.after_cancel(str(timer_id))  # Cancel any existing timer
+            update()  # Call update immediately to avoid delay
+            address_input_var.set(addresses.get(selected_coin["text"]))
+            # set price of the app
+            the_price = APP_PRICE / \
+                float(get_coin_current_price(selected_coin["text"]))
+            price_input_var.set(f"{the_price:.8f}")
+            the_price = float(price_input_var.get())
+            txid_input_var.set("")
+            datetime_data = get_datetime_data()
+            global first_clock_now, first_date_now
+            first_clock_now = get_current_time(datetime_data)
+            first_date_now = get_current_date(datetime_data)
 
-        if the_price < MINIMUM_LIMIT_PRICE:
-            on_back_payment()
-            messagebox.showwarning(
-                TITLE_ANOTHER_CURRENCY, MESSAGE_ANOTHER_CURRENCY)
-        elif TESTING:
-            print("First Time format: " + first_clock_now)
-            print("First Date format: " + first_date_now)
+            if the_price < MINIMUM_LIMIT_PRICE:
+                on_back_payment()
+                messagebox.showwarning(
+                    TITLE_ANOTHER_CURRENCY, MESSAGE_ANOTHER_CURRENCY)
+            elif TESTING:
+                print("First Time format: " + first_clock_now)
+                print("First Date format: " + first_date_now)
     except requests.exceptions.ConnectionError:
         on_back_payment()
         messagebox.showwarning(TITLE_LOST_CONNECTION, MESSAGE_LOST_CONNECTION)
