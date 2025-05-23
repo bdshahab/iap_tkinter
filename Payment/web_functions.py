@@ -11,7 +11,7 @@ DEFAULT_PRICE_KEYWORD = "default%20prices/"
 DEFAULT_PRICE_SUFFIX = ".txt"
 KEY_DATA_SITE = GITHUB + "key_data.txt"
 # updatable key data
-IAP_VERSION = "3"
+IAP_VERSION = "4"
 
 
 def get_latest_key_data():
