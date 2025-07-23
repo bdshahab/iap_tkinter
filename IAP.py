@@ -9,6 +9,7 @@ from Payment.iap_variables import *
 from Payment.web_functions import *
 from tools.Tooltip import *
 import tools.for_time as for_time
+from Payment.language import custom_texts
 
 
 first_clock_now = ""
@@ -18,7 +19,7 @@ last_date_now = ""
 
 # Create the main window
 root = tk.Tk()
-root.title("Custom GUI")
+root.title("IAP by cryptocurrency")
 root.geometry("600x450")  # Adjust size as needed
 
 # Create a custom style for hiding tabs
@@ -35,15 +36,15 @@ tab3 = tk.Frame(notebook, bg="#cbcbcb")
 tab4 = tk.Frame(notebook, bg="#a300ff")
 
 notebook.add(tab1, text="menu")
-notebook.add(tab2, text="select coin")
-notebook.add(tab3, text="payment")
-notebook.add(tab4, text="You Bought this")
+notebook.add(tab2, text=custom_texts[0])
+notebook.add(tab3, text=custom_texts[4])
+notebook.add(tab4, text=custom_texts[29])
 
 
 # TODO ************Menu************
 def on_pay_button():
     if Global.user_bought:
-        messagebox.showinfo(TITLE_PAID, MESSAGE_PAID)
+        messagebox.showinfo(custom_texts[33], custom_texts[34])
     else:
         notebook.select(notebook.index("current") + 1)
         selected_coin.config(text="")
@@ -91,8 +92,8 @@ def on_next_select_coin():
         reset_timer()
         start_timer()
     else:
-        messagebox.showerror(TITLE_COIN_NOT_SELECTED,
-                             MESSAGE_COIN_NOT_SELECTED)
+        messagebox.showerror(custom_texts[2],
+                             custom_texts[3])
 
 
 def on_crypto_click(coin_name):
@@ -102,7 +103,7 @@ def on_crypto_click(coin_name):
 
 # Title label
 title_label = tk.Label(
-    tab2, text="Choose a digital currency to pay:", font=title_font)
+    tab2, text=custom_texts[0], font=title_font)
 title_label.pack(pady=10)
 title_label.config(bg="white")
 
@@ -202,8 +203,8 @@ def start_timer():
         for_time.start_time_in_system = int(time.time())
         if not get_latest_key_data():
             notebook.select(0)
-            messagebox.showerror(TITLE_PAYMENT_VERSION,
-                                 MESSAGE_PAYMENT_VERSION)
+            messagebox.showerror(custom_texts[25],
+                                 custom_texts[26])
             show_about(root)
         else:
             global carry_on, timer_id
@@ -226,13 +227,13 @@ def start_timer():
             if the_price < MINIMUM_LIMIT_PRICE:
                 on_back_payment()
                 messagebox.showwarning(
-                    TITLE_ANOTHER_CURRENCY, MESSAGE_ANOTHER_CURRENCY)
+                    custom_texts[27], custom_texts[28])
             elif TESTING:
                 print("First Time format: " + first_clock_now)
                 print("First Date format: " + first_date_now)
     except requests.exceptions.ConnectionError:
         on_back_payment()
-        messagebox.showwarning(TITLE_LOST_CONNECTION, MESSAGE_LOST_CONNECTION)
+        messagebox.showwarning(custom_texts[19], custom_texts[20])
 
 
 def copy_to_clipboard(entry_widget):
@@ -311,31 +312,30 @@ def on_buy_click():
                     on_back_payment()
                 elif verify_result == "ADDRESS":
                     messagebox.showwarning(
-                        TITLE_ANOTHER_ADDRESS, MESSAGE_ANOTHER_ADDRESS)
+                        custom_texts[15], custom_texts[16])
                 elif verify_result == "PRICE":
                     messagebox.showwarning(
-                        TITLE_EXACT_PRICE, MESSAGE_EXACT_PRICE)
+                        custom_texts[11], custom_texts[12])
                 elif verify_result == "TXID":
                     messagebox.showwarning(
-                        TITLE_TXID_NOT_EXIST, MESSAGE_TXID_NOT_EXIST)
+                        custom_texts[13], custom_texts[14])
                 elif verify_result == "DATE":
-                    messagebox.showwarning(
-                        TITLE_ANOTHER_DATE, MESSAGE_ANOTHER_DATE)
+                    messagebox.showwarning(custom_texts[15], custom_texts[16])
                 elif verify_result == "TIME":
                     messagebox.showwarning(
-                        TITLE_ANOTHER_TIME, MESSAGE_ANOTHER_TIME)
+                        custom_texts[17], custom_texts[18])
             except ValueError:
                 messagebox.showwarning(
-                    TITLE_TXID_NOT_EXIST, MESSAGE_TXID_NOT_EXIST)
+                    custom_texts[13], custom_texts[14])
         except (requests.exceptions.ConnectionError, ValueError):
-            messagebox.showwarning(TITLE_LOST_CONNECTION,
-                                   MESSAGE_LOST_CONNECTION)
+            messagebox.showwarning(custom_texts[19],
+                                   custom_texts[20])
     else:
-        messagebox.showerror(TITLE_EMPTY_TXID, MESSAGE_EMPTY_TXID)
+        messagebox.showerror(custom_texts[21], custom_texts[22])
 
 
 def on_help_click():
-    messagebox.showinfo(TITLE_HELP, MESSAGE_HELP)
+    messagebox.showinfo(custom_texts[23], custom_texts[24])
 
 
 def set_selected_coin_icon():
@@ -371,7 +371,7 @@ row1_frame.grid_columnconfigure(2, weight=1)
 set_selected_coin_icon()
 
 label_description = tk.Label(
-    row1_frame, text="Pay before time's up!", bg="#cbcbcb", font=title_font)
+    row1_frame, text=custom_texts[5], bg="#cbcbcb", font=title_font)
 label_description.grid(row=0, column=1, sticky="w", padx=5)
 
 label_timer = tk.Label(row1_frame, text="", bg="#cbcbcb", font=timer_font)
@@ -384,7 +384,7 @@ row2_frame.grid_columnconfigure(0, weight=1)
 row2_frame.grid_columnconfigure(1, weight=3)
 row2_frame.grid_columnconfigure(2, weight=1)
 
-label_address = tk.Label(row2_frame, text="Address",
+label_address = tk.Label(row2_frame, text=custom_texts[6],
                          bg="#cbcbcb", font=normal_font)
 label_address.grid(row=0, column=0, sticky="w", padx=5)
 
@@ -414,7 +414,7 @@ row3_frame.grid_columnconfigure(0, weight=1)
 row3_frame.grid_columnconfigure(1, weight=3)
 row3_frame.grid_columnconfigure(2, weight=1)
 
-label_price = tk.Label(row3_frame, text="Price:",
+label_price = tk.Label(row3_frame, text=custom_texts[7],
                        bg="#cbcbcb", font=normal_font)
 label_price.grid(row=0, column=0, sticky="w", padx=5)
 
@@ -432,7 +432,7 @@ row4_frame = tk.Frame(tab3, bg="#cbcbcb")
 row4_frame.grid(row=3, column=0, sticky="ew", padx=10, pady=10)
 row4_frame.grid_columnconfigure(0, weight=1)
 
-label_4 = tk.Label(row4_frame, text="Input your Transaction Hash ID(TXID):",
+label_4 = tk.Label(row4_frame, text=custom_texts[8],
                    bg="#cbcbcb", font=normal_font)
 label_4.grid(row=0, column=0, sticky="w", padx=5)
 
@@ -520,15 +520,15 @@ def on_bought_ok():
 
 # Row 1 - Image, Description, and Timer
 Label_select = tk.Label(tab4, bg="#a300ff", fg="white",
-                        text="Congratulations!", font=normal_font)
+                        text=custom_texts[30], font=normal_font)
 Label_select.grid(row=0, column=0, sticky="ew", padx=10, pady=10)
 
 Label_select = tk.Label(tab4, bg="#a300ff", fg="white",
-                        text="Your purchase was successful.", font=normal_font)
+                        text=custom_texts[31], font=normal_font)
 Label_select.grid(row=1, column=0, sticky="ew", padx=10, pady=10)
 
 Label_select = tk.Label(tab4, bg="#a300ff", fg="white",
-                        text="Now you can use all the features of this program.", font=normal_font)
+                        text=custom_texts[32], font=normal_font)
 Label_select.grid(row=2, column=0, sticky="ew", padx=10, pady=10)
 
 temp_bought_ok_image = Image.open(
