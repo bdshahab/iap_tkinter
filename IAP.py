@@ -341,8 +341,8 @@ def on_help_click():
 def set_selected_coin_icon():
     # Load an image (Ensure you have an image file path)
     if Global.selected_payment != "":
-        coid_icon = "Payment/Photos/" + Global.selected_payment + ".png"
-        the_img_selected_coin = Image.open(coid_icon)
+        coin_icon = "Payment/Photos/" + Global.selected_payment + ".png"
+        the_img_selected_coin = Image.open(coin_icon)
         # Resize the image to fit
         the_img_selected_coin = the_img_selected_coin.resize(
             (50, 50), Image.Resampling.LANCZOS)
