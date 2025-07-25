@@ -21,6 +21,12 @@ last_date_now = ""
 root = tk.Tk()
 root.title("IAP by cryptocurrency")
 root.geometry("600x450")  # Adjust size as needed
+# set width and height
+Global.screen_width = root.winfo_screenwidth()
+Global.screen_height = root.winfo_screenheight()
+if Global.screen_height > Global.screen_width:
+    Global.screen_width, Global.screen_height = Global.screen_height, Global.screen_width
+the_limit = int(Global.screen_width / 25)
 
 # Create a custom style for hiding tabs
 style = ttk.Style()
@@ -105,7 +111,7 @@ def on_crypto_click(coin_name):
 title_label = tk.Label(
     tab2, text=custom_texts[0], font=title_font)
 title_label.pack(pady=10)
-title_label.config(bg="white")
+title_label.config(bg="white", width=int(the_limit/1.2))
 
 # Container for cryptocurrency buttons
 frame = tk.Frame(tab2)
@@ -371,7 +377,7 @@ row1_frame.grid_columnconfigure(2, weight=1)
 set_selected_coin_icon()
 
 label_description = tk.Label(
-    row1_frame, text=custom_texts[5], bg="#cbcbcb", font=title_font)
+    row1_frame, text=custom_texts[5], bg="#cbcbcb", font=title_font, width=the_limit//2)
 label_description.grid(row=0, column=1, sticky="w", padx=5)
 
 label_timer = tk.Label(row1_frame, text="", bg="#cbcbcb", font=timer_font)
@@ -385,7 +391,7 @@ row2_frame.grid_columnconfigure(1, weight=3)
 row2_frame.grid_columnconfigure(2, weight=1)
 
 label_address = tk.Label(row2_frame, text=custom_texts[6],
-                         bg="#cbcbcb", font=normal_font)
+                         bg="#cbcbcb", font=normal_font, width=the_limit//3)
 label_address.grid(row=0, column=0, sticky="w", padx=5)
 
 address_input_var = tk.StringVar(tab3, "")
@@ -415,7 +421,7 @@ row3_frame.grid_columnconfigure(1, weight=3)
 row3_frame.grid_columnconfigure(2, weight=1)
 
 label_price = tk.Label(row3_frame, text=custom_texts[7],
-                       bg="#cbcbcb", font=normal_font)
+                       bg="#cbcbcb", font=normal_font, width=the_limit//3)
 label_price.grid(row=0, column=0, sticky="w", padx=5)
 
 price_input = tk.Entry(
@@ -433,7 +439,7 @@ row4_frame.grid(row=3, column=0, sticky="ew", padx=10, pady=10)
 row4_frame.grid_columnconfigure(0, weight=1)
 
 label_4 = tk.Label(row4_frame, text=custom_texts[8],
-                   bg="#cbcbcb", font=normal_font)
+                   bg="#cbcbcb", font=normal_font, width=the_limit//1)
 label_4.grid(row=0, column=0, sticky="w", padx=5)
 
 # Row 5 - Large Text Input and Button
@@ -510,7 +516,7 @@ for i in range(6):
     tab3.grid_rowconfigure(i, weight=1)
 
 
-# TODO ************Buy************
+# TODO ************Bought************
 def on_bought_ok():
     Global.user_bought = True
     purchase_situation.config(text="You bought this app!",
@@ -541,11 +547,11 @@ bought_ok = tk.Button(tab4, bg="#a300ff", activebackground="#a300ff", image=str(
     bought_ok_image), font=normal_font, command=on_bought_ok)
 bought_ok.grid(row=3, column=0, sticky="ew", padx=10, pady=10)
 
-tab4.grid_columnconfigure(0, weight=1)  # Allow column 0 to expand
+# tab4.grid_columnconfigure(0, weight=1)  # Allow column 0 to expand
 tab4.grid_rowconfigure(0, weight=1)    # Allow row 0 to expand
 tab4.grid_rowconfigure(1, weight=1)    # Allow row 1 to expand
 tab4.grid_rowconfigure(2, weight=1)    # Allow row 2 to expand
-
+Label_select.config(width=the_limit)
 center_window(root)
 
 # Start the Tkinter main loop
