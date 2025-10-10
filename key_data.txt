@@ -14,7 +14,7 @@ Price \$ ([0-9,]+\.?[0-9]*), Trading Volume
 lower
 -
 /address/
-">
+" 
 /transaction/
 "
 
