@@ -61,7 +61,7 @@ other_vars = {
     "COIN_REGEX_SEPARATOR": "-",
     # To get the validation of payment
     "ADDRESS_PREFIX": "/address/",
-    "ADDRESS_SUFFIX": "\">",
+    "ADDRESS_SUFFIX": "\" ",
     "TXID_PREFIX": "/transaction/",
     "TXID_SUFFIX": "\"",
     "MONEY_PREFIX": "",
