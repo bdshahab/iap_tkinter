@@ -4,48 +4,48 @@ from tools.Centralization import *
 import requests
 from Payment.web_functions import GITHUB
 
-link_logo = "AAAAhttps://duckduckgo.com/?q=bdshahab"
-link_license = "AAAAhttps://creativecommons.org/licenses/by/4.0"
-link_b_1 = "AAAAhttps://bdshahab.blogspot.com"
-link_b_2 = "AAAAhttps://bsky.app/profile/bdshahab.bsky.social"
-link_b_3 = "AAAAhttps://www.chess.com/member/bdshahab1982"
-link_b_4 = "AAAAhttps://app.clouthub.com/#/users/u/bdshahab"
-link_b_5 = "AAAAhttps://diamondapp.com/u/bdshahab"
-link_b_6 = "AAAAhttps://diasp.org/u/bdshahab"
-link_b_7 = "AAAAhttps://discord.gg/xgMdTXBhnE"
-link_b_8 = "AAAAhttps://www.facebook.com/shahab.baradaran.dilmaghani"
-link_b_9 = "AAAAhttps://www.flickr.com/photos/bdshahab"
-link_b_10 = "AAAAhttps://flipboard.com/@bdshahab1982"
-link_b_11 = "AAAAhttps://gab.com/bdshahab"
-link_b_12 = "AAAAhttps://gettr.com/user/bdshahab"
-link_b_13 = "AAAAhttps://www.instagram.com/bdshahab1982"
-link_b_14 = "AAAAhttps://bdshahab.itch.io"
-link_b_15 = "AAAAhttps://justpaste.it/u/bdshahab"
-link_b_16 = "AAAAhttps://lichess.org/@/bdshahab"
-link_b_17 = "AAAAhttps://www.linkedin.com/company/bdshahab"
-link_b_18 = "AAAAhttps://bdshahab1982.livejournal.com"
-link_b_19 = "AAAAhttps://mastodon.social/@bdshahab"
-link_b_20 = "AAAAhttps://matrix.to/#/#bdshahab:matrix.org"
-link_b_21 = "AAAAhttps://bdshahab.medium.com"
-link_b_22 = "AAAAhttps://mewe.com/bdshahab"
-link_b_23 = "AAAAhttps://www.minds.com/bdshahab"
-link_b_24 = "AAAAhttps://odysee.com/@bdshahab"
-link_b_25 = "AAAAhttps://www.pinterest.com/bdshahab"
-link_b_26 = "AAAAhttps://primal.net/p/npub1lu5m9cjqnyaqay0uc77t526qjtkx5qu8qxe8l2kqrflmagac3c8q7g8nu5"
-link_b_27 = "AAAAhttps://www.reddit.com/user/bdshahab"
-link_b_28 = "AAAAhttps://rumble.com/c/c-1832445/videos"
-link_b_29 = "AAAAhttps://spoutible.com/bdshahab"
-link_b_30 = "AAAAhttps://steemit.com/@bdshahab"
-link_b_31 = "AAAAhttps://t.me/bd_shahab"
-link_b_32 = "AAAAhttps://the-dots.com/users/shahab-baradaran-dilmaghani-1291359"
-link_b_33 = "AAAAhttps://www.threads.net/@bdshahab1982"
-link_b_34 = "AAAAhttps://www.tiktok.com/@bdshahab"
-link_b_35 = "AAAAhttps://bdshahab.tumblr.com"
-link_b_36 = "AAAAhttps://vk.com/bdshahab"
-link_b_37 = "AAAAhttps://bdsh.wordpress.com"
-link_b_38 = "AAAAhttps://x.com/bdshahab"
-link_b_39 = "AAAAhttps://www.xing.com/profile/Shahab_BaradaranDilmaghani"
-link_b_40 = "AAAAhttps://www.youtube.com/@bdshahab"
+link_logo = "https://duckduckgo.com/?q=bdshahab"
+link_license = "https://opensource.org/license/mit"
+link_b_1 = "https://bdshahab.blogspot.com"
+link_b_2 = "https://bsky.app/profile/bdshahab.bsky.social"
+link_b_3 = "https://www.chess.com/member/bdshahab1982"
+link_b_4 = "https://app.clouthub.com/#/users/u/bdshahab"
+link_b_5 = "https://diamondapp.com/u/bdshahab"
+link_b_6 = "https://diasp.org/u/bdshahab"
+link_b_7 = "https://discord.gg/xgMdTXBhnE"
+link_b_8 = "https://www.facebook.com/shahab.baradaran.dilmaghani"
+link_b_9 = "https://www.flickr.com/photos/bdshahab"
+link_b_10 = "https://flipboard.com/@bdshahab1982"
+link_b_11 = "https://gab.com/bdshahab"
+link_b_12 = "https://gettr.com/user/bdshahab"
+link_b_13 = "https://www.instagram.com/bdshahab1982"
+link_b_14 = "https://bdshahab.itch.io"
+link_b_15 = "https://justpaste.it/u/bdshahab"
+link_b_16 = "https://lichess.org/@/bdshahab"
+link_b_17 = "https://www.linkedin.com/company/bdshahab"
+link_b_18 = "https://bdshahab1982.livejournal.com"
+link_b_19 = "https://mastodon.social/@bdshahab"
+link_b_20 = "https://matrix.to/#/#bdshahab:matrix.org"
+link_b_21 = "https://bdshahab.medium.com"
+link_b_22 = "https://mewe.com/bdshahab"
+link_b_23 = "https://www.minds.com/bdshahab"
+link_b_24 = "https://odysee.com/@bdshahab"
+link_b_25 = "https://www.pinterest.com/bdshahab"
+link_b_26 = "https://primal.net/p/npub1lu5m9cjqnyaqay0uc77t526qjtkx5qu8qxe8l2kqrflmagac3c8q7g8nu5"
+link_b_27 = "https://www.reddit.com/user/bdshahab"
+link_b_28 = "https://rumble.com/c/c-1832445/videos"
+link_b_29 = "https://spoutible.com/bdshahab"
+link_b_30 = "https://steemit.com/@bdshahab"
+link_b_31 = "https://t.me/bd_shahab"
+link_b_32 = "https://the-dots.com/users/shahab-baradaran-dilmaghani-1291359"
+link_b_33 = "https://www.threads.net/@bdshahab1982"
+link_b_34 = "https://www.tiktok.com/@bdshahab"
+link_b_35 = "https://bdshahab.tumblr.com"
+link_b_36 = "https://vk.com/bdshahab"
+link_b_37 = "https://bdsh.wordpress.com"
+link_b_38 = "https://x.com/bdshahab"
+link_b_39 = "https://www.xing.com/profile/Shahab_BaradaranDilmaghani"
+link_b_40 = "https://www.youtube.com/@bdshahab"
 
 
 def show_about(the_root):
@@ -73,16 +73,15 @@ def show_about(the_root):
     title = tk.Label(frame_left, text="IAP by Cryptocurrency",
                      font=("Arial", 24), fg="red", bg="white")
     title.pack(side=tk.LEFT)
-    Tooltip(title, f"AAAAhttps://duckduckgo.com/?q=bdshahab {title["text"]}",
-            f"AAAAhttps://duckduckgo.com/?q=bdshahab {title["text"]}")
+    Tooltip(title, f"https://duckduckgo.com/?q=bdshahab {title["text"]}",
+            f"https://duckduckgo.com/?q=bdshahab {title["text"]}")
 
-    image = PILImage.open("About/Photos/license.png").resize((200, 50))
+    image = PILImage.open("About/Photos/license.png").resize((50, 50))
     img = ImageTk.PhotoImage(image)
     the_license = tk.Label(frame_left, image=str(img), bg="white")
     the_license.pack(side=tk.LEFT)
     the_license.image = img  # Keep a reference to avoid garbage collection
-    Tooltip(the_license, "AAAAhttps://creativecommons.org/licenses/by/4.0",
-            "AAAAhttps://creativecommons.org/licenses/by/4.0")
+    Tooltip(the_license, link_license, link_license)
 
     # Create a frame to hold the icons
     frame = tk.Frame(top_level_window, bg="white")
@@ -133,46 +132,46 @@ def show_about(the_root):
     ]
 
     social_media = {
-        "blogger": "AAAAhttps://bdshahab.blogspot.com",
-        "blue_sky": "AAAAhttps://bsky.app/profile/bdshahab.bsky.social",
-        "chess_com": "AAAAhttps://www.chess.com/member/bdshahab1982",
-        "clouthub": "AAAAhttps://app.clouthub.com/#/users/u/bdshahab",
-        "diamondapp": "AAAAhttps://diamondapp.com/u/bdshahab",
-        "diaspora": "AAAAhttps://diasp.org/u/bdshahab",
-        "discord": "AAAAhttps://discord.gg/xgMdTXBhnE",
-        "facebook": "AAAAhttps://www.facebook.com/shahab.baradaran.dilmaghani",
-        "flickr": "AAAAhttps://www.flickr.com/photos/bdshahab",
-        "flipboard": "AAAAhttps://flipboard.com/@bdshahab1982",
-        "gab": "AAAAhttps://gab.com/bdshahab",
-        "gettr": "AAAAhttps://gettr.com/user/bdshahab",
-        "instagram": "AAAAhttps://www.instagram.com/bdshahab1982",
-        "itch_io": "AAAAhttps://bdshahab.itch.io",
-        "justpaste_it": "AAAAhttps://justpaste.it/u/bdshahab",
-        "lichess": "AAAAhttps://lichess.org/@/bdshahab",
-        "linkedin": "AAAAhttps://www.linkedin.com/company/bdshahab",
-        "livejournal": "AAAAhttps://bdshahab1982.livejournal.com",
-        "Mastodon": "AAAAhttps://mastodon.social/@bdshahab",
-        "matrix": "AAAAhttps://matrix.to/#/#bdshahab:matrix.org",
-        "medium": "AAAAhttps://bdshahab.medium.com",
-        "mewe": "AAAAhttps://mewe.com/bdshahab",
-        "minds": "AAAAhttps://www.minds.com/bdshahab",
-        "odysee": "AAAAhttps://odysee.com/@bdshahab",
-        "pinterest": "AAAAhttps://www.pinterest.com/bdshahab",
-        "primal": "AAAAhttps://primal.net/p/npub1lu5m9cjqnyaqay0uc77t526qjtkx5qu8qxe8l2kqrflmagac3c8q7g8nu5",
-        "reddit": "AAAAhttps://www.reddit.com/user/bdshahab",
-        "rumble": "AAAAhttps://rumble.com/c/c-1832445/videos",
-        "spoutible": "AAAAhttps://spoutible.com/bdshahab",
-        "steemit": "AAAAhttps://steemit.com/@bdshahab",
-        "telegram": "AAAAhttps://t.me/bd_shahab",
-        "the_dots": "AAAAhttps://the-dots.com/users/shahab-baradaran-dilmaghani-1291359",
-        "threads": "AAAAhttps://www.threads.net/@bdshahab1982",
-        "tiktok": "AAAAhttps://www.tiktok.com/@bdshahab",
-        "tumblr": "AAAAhttps://bdshahab.tumblr.com",
-        "vk": "AAAAhttps://vk.com/bdshahab",
-        "wordpress": "AAAAhttps://bdsh.wordpress.com",
-        "x": "AAAAhttps://x.com/bdshahab",
-        "xing": "AAAAhttps://www.xing.com/profile/Shahab_BaradaranDilmaghani",
-        "youtube": "AAAAhttps://www.youtube.com/@bdshahab",
+        "blogger": "https://bdshahab.blogspot.com",
+        "blue_sky": "https://bsky.app/profile/bdshahab.bsky.social",
+        "chess_com": "https://www.chess.com/member/bdshahab1982",
+        "clouthub": "https://app.clouthub.com/#/users/u/bdshahab",
+        "diamondapp": "https://diamondapp.com/u/bdshahab",
+        "diaspora": "https://diasp.org/u/bdshahab",
+        "discord": "https://discord.gg/xgMdTXBhnE",
+        "facebook": "https://www.facebook.com/shahab.baradaran.dilmaghani",
+        "flickr": "https://www.flickr.com/photos/bdshahab",
+        "flipboard": "https://flipboard.com/@bdshahab1982",
+        "gab": "https://gab.com/bdshahab",
+        "gettr": "https://gettr.com/user/bdshahab",
+        "instagram": "https://www.instagram.com/bdshahab1982",
+        "itch_io": "https://bdshahab.itch.io",
+        "justpaste_it": "https://justpaste.it/u/bdshahab",
+        "lichess": "https://lichess.org/@/bdshahab",
+        "linkedin": "https://www.linkedin.com/company/bdshahab",
+        "livejournal": "https://bdshahab1982.livejournal.com",
+        "Mastodon": "https://mastodon.social/@bdshahab",
+        "matrix": "https://matrix.to/#/#bdshahab:matrix.org",
+        "medium": "https://bdshahab.medium.com",
+        "mewe": "https://mewe.com/bdshahab",
+        "minds": "https://www.minds.com/bdshahab",
+        "odysee": "https://odysee.com/@bdshahab",
+        "pinterest": "https://www.pinterest.com/bdshahab",
+        "primal": "https://primal.net/p/npub1lu5m9cjqnyaqay0uc77t526qjtkx5qu8qxe8l2kqrflmagac3c8q7g8nu5",
+        "reddit": "https://www.reddit.com/user/bdshahab",
+        "rumble": "https://rumble.com/c/c-1832445/videos",
+        "spoutible": "https://spoutible.com/bdshahab",
+        "steemit": "https://steemit.com/@bdshahab",
+        "telegram": "https://t.me/bd_shahab",
+        "the_dots": "https://the-dots.com/users/shahab-baradaran-dilmaghani-1291359",
+        "threads": "https://www.threads.net/@bdshahab1982",
+        "tiktok": "https://www.tiktok.com/@bdshahab",
+        "tumblr": "https://bdshahab.tumblr.com",
+        "vk": "https://vk.com/bdshahab",
+        "wordpress": "https://bdsh.wordpress.com",
+        "x": "https://x.com/bdshahab",
+        "xing": "https://www.xing.com/profile/Shahab_BaradaranDilmaghani",
+        "youtube": "https://www.youtube.com/@bdshahab",
     }
     # Load and place the icons in a grid
     row = 0
