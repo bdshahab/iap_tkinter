@@ -6,7 +6,7 @@ import Payment.iap_variables as vars
 # this one depends on selected coin
 price_site_middle = ""
 
-GITHUB = "https://raw.githubusercontent.com/bdshahab/iap_tkinter/main/"
+GITHUB = "https://raw.githubusercontent.com/bdshahab/iap_qt/main/"
 DEFAULT_PRICE_KEYWORD = "default%20prices/"
 DEFAULT_PRICE_SUFFIX = ".txt"
 KEY_DATA_SITE = GITHUB + "key_data.txt"
@@ -104,6 +104,38 @@ def get_latest_key_data():
             vars.other_vars[vars.the_coins[14]] = line
         elif num == 41:
             vars.other_vars[vars.the_coins[15]] = line
+        elif num == 42:
+            addresses[vars.the_coins[0]] = line
+        elif num == 43:
+            addresses[vars.the_coins[1]] = line
+        elif num == 44:
+            addresses[vars.the_coins[2]] = line
+        elif num == 45:
+            addresses[vars.the_coins[3]] = line
+        elif num == 46:
+            addresses[vars.the_coins[4]] = line
+        elif num == 47:
+            addresses[vars.the_coins[5]] = line
+        elif num == 48:
+            addresses[vars.the_coins[6]] = line
+        elif num == 49:
+            addresses[vars.the_coins[7]] = line
+        elif num == 50:
+            addresses[vars.the_coins[8]] = line
+        elif num == 51:
+            addresses[vars.the_coins[9]] = line
+        elif num == 52:
+            addresses[vars.the_coins[10]] = line
+        elif num == 53:
+            addresses[vars.the_coins[11]] = line
+        elif num == 54:
+            addresses[vars.the_coins[12]] = line
+        elif num == 55:
+            addresses[vars.the_coins[13]] = line
+        elif num == 56:
+            addresses[vars.the_coins[14]] = line
+        elif num == 57:
+            addresses[vars.the_coins[15]] = line
         num = num + 1
     update_urls()
     return True
