@@ -1,3 +1,4 @@
+from decimal import Decimal
 import sys
 import time
 import Global
@@ -156,7 +157,7 @@ next_button.pack(side="left", fill="x")
 
 # TODO ************Payment************
 # Global variables
-time_in_seconds = TOTAL_TIME
+time_in_seconds = TOTAL_TIME[0]
 timer_id = None  # Initialize timer_id to None
 text = for_time.get_display_time(time_in_seconds)
 carry_on = False
@@ -165,7 +166,7 @@ carry_on = False
 def reset_timer():
     global text, carry_on, timer_id, time_in_seconds
     carry_on = False
-    time_in_seconds = TOTAL_TIME
+    time_in_seconds = TOTAL_TIME[0]
     text = for_time.get_display_time(time_in_seconds)
     label_timer.configure(text=text)  # Update label text immediately
     if timer_id is not None:
@@ -181,12 +182,12 @@ def update():
     So we use real-time difference to prevent that problem.
     """
     global text, carry_on, timer_id, time_in_seconds
-    time_in_seconds = TOTAL_TIME - \
+    time_in_seconds = TOTAL_TIME[0] - \
         (int(time.time()) - for_time.start_time_in_system)
 
-    if time_in_seconds > 2 * (TOTAL_TIME / 3):
+    if time_in_seconds > 2 * (TOTAL_TIME[0] / 3):
         label_timer.configure(fg="#0000ff")
-    elif time_in_seconds > (TOTAL_TIME / 3):
+    elif time_in_seconds > (TOTAL_TIME[0] / 3):
         label_timer.configure(fg="#00ff00")
     else:
         label_timer.configure(fg="#ff0000")
@@ -222,7 +223,12 @@ def start_timer():
             # set price of the app
             the_price = APP_PRICE / \
                 float(get_coin_current_price(selected_coin["text"]))
-            price_input_var.set(f"{the_price:.8f}")
+
+            the_price = Decimal(the_price)
+            # Automatically handles full decimal witout scientific (e)
+            the_price = format(the_price, 'f')
+            price_input_var.set(format_with_separator(the_price, int(
+                vars.price_decimals[Global.selected_payment]), ""))
             the_price = float(price_input_var.get())
             txid_input_var.set("")
             datetime_data = get_datetime_data()
@@ -230,7 +236,7 @@ def start_timer():
             first_clock_now = get_current_time(datetime_data)
             first_date_now = get_current_date(datetime_data)
 
-            if the_price < MINIMUM_LIMIT_PRICE:
+            if Decimal(the_price) < Decimal(MINIMUM_LIMIT_PRICE[Global.selected_payment]):
                 on_back_payment()
                 messagebox.showwarning(
                     custom_texts[27], custom_texts[28])
