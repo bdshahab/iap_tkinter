@@ -130,7 +130,7 @@ for i in range(len(cryptos)):
     btn = tk.Button(frame, image=str(photo),
                     command=lambda n=vars.the_coins[i]: on_crypto_click(n))
     btn.image = photo  # Save reference to avoid garbage collection
-    btn.grid(row=index // 4, column=index % 4, padx=10, pady=10)
+    btn.grid(row=index // 3, column=index % 3, padx=10, pady=10)
     index += 1
 
 frame_bottom = tk.Frame(tab2)
@@ -349,6 +349,10 @@ def on_help_click():
     messagebox.showinfo(custom_texts[23], custom_texts[24])
 
 
+def search_term(term):
+    webbrowser.open(f"https://duckduckgo.com/?q={term}")
+
+
 def set_selected_coin_icon():
     # Load an image (Ensure you have an image file path)
     if Global.selected_payment != "":
@@ -358,9 +362,19 @@ def set_selected_coin_icon():
         the_img_selected_coin = the_img_selected_coin.resize(
             (50, 50), Image.Resampling.LANCZOS)
         img_tk = ImageTk.PhotoImage(the_img_selected_coin)
-        label_image = tk.Label(row1_frame, bg="#cbcbcb", image=str(img_tk))
+        label_image = tk.Label(row1_frame, bg="#cbcbcb",
+                               image=str(img_tk), cursor="hand2")
         label_image.grid(row=0, column=0, sticky="w", padx=5)
         label_image.image = img_tk  # Keep a reference to prevent garbage collection
+        # Change cursor when hovering
+        label_image.bind(
+            "<Enter>", lambda e: label_image.config(cursor="hand2"))
+        label_image.bind(
+            "<Leave>", lambda e: label_image.config(cursor="arrow"))
+        # Open URL when clicked
+        label_image.bind(
+            "<Button-1>", lambda _: search_term(selected_coin["text"]))
+        # set tooltip
         import tools.Normal_ToolTip as Normal_ToolTip
         Normal_ToolTip.ToolTip(
             label_image, Global.selected_payment, "white", "black")
