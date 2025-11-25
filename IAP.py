@@ -235,7 +235,6 @@ def start_timer():
             global first_clock_now, first_date_now
             first_clock_now = get_current_time(datetime_data)
             first_date_now = get_current_date(datetime_data)
-
             if Decimal(the_price) < Decimal(MINIMUM_LIMIT_PRICE[Global.selected_payment]):
                 on_back_payment()
                 messagebox.showwarning(
