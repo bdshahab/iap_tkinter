@@ -181,29 +181,31 @@ def update():
     But if the window freezes, it will not run, and time will fall behind in real time!
     So we use real-time difference to prevent that problem.
     """
-    global text, carry_on, timer_id, time_in_seconds
-    time_in_seconds = TOTAL_TIME[0] - \
-        (int(time.time()) - for_time.start_time_in_system)
+    try:
+        global text, carry_on, timer_id, time_in_seconds
+        time_in_seconds = TOTAL_TIME[0] - \
+            (int(time.time()) - for_time.start_time_in_system)
 
-    if time_in_seconds > 2 * (TOTAL_TIME[0] / 3):
-        label_timer.configure(fg="#0000ff")
-    elif time_in_seconds > (TOTAL_TIME[0] / 3):
-        label_timer.configure(fg="#00ff00")
-    else:
-        label_timer.configure(fg="#ff0000")
+        if time_in_seconds > 2 * (TOTAL_TIME[0] / 3):
+            label_timer.configure(fg="#0000ff")
+        elif time_in_seconds > (TOTAL_TIME[0] / 3):
+            label_timer.configure(fg="#00ff00")
+        else:
+            label_timer.configure(fg="#ff0000")
 
-    if time_in_seconds < 0:
-        time_in_seconds = 0
+        if time_in_seconds < 0:
+            time_in_seconds = 0
+            text = for_time.get_display_time(time_in_seconds)
+            label_timer.configure(text=text)
+            on_back_payment()
+            return
         text = for_time.get_display_time(time_in_seconds)
         label_timer.configure(text=text)
-        on_back_payment()
-        return
-    text = for_time.get_display_time(time_in_seconds)
-    label_timer.configure(text=text)
-    if carry_on:
-        # schedule next update 1 second later
-        timer_id = root.after(1000, update)
-
+        if carry_on:
+            # schedule next update 1 second later
+            timer_id = root.after(1000, update)
+    except Exception:
+        pass
 
 def start_timer():
     try:
