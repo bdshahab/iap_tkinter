@@ -160,7 +160,7 @@ def show_about(the_root):
         "pinterest": "https://www.pinterest.com/bdshahab",
         "primal": "https://primal.net/p/npub1lu5m9cjqnyaqay0uc77t526qjtkx5qu8qxe8l2kqrflmagac3c8q7g8nu5",
         "producthunt": "https://primal.net/p/npub1lu5m9cjqnyaqay0uc77t526qjtkx5qu8qxe8l2kqrflmagac3c8q7g8nu5",
-        "reddit": "https://www.reddit.com/user/bdshahab",
+        "quora": "https://www.quora.com/profile/Shahab-Baradaran-Dilmaghani",
         "spoutible": "https://spoutible.com/bdshahab",
         "steemit": "https://steemit.com/@bdshahab",
         "telegram": "https://t.me/bd_shahab",
@@ -228,4 +228,5 @@ def show_about(the_root):
 
     top_level_window.resizable(False, False)
     center_window(top_level_window)
+
 
