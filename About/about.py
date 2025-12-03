@@ -32,7 +32,7 @@ link_b_23 = "https://www.minds.com/bdshahab"
 link_b_24 = "https://odysee.com/@bdshahab"
 link_b_25 = "https://www.pinterest.com/bdshahab"
 link_b_26 = "https://primal.net/p/npub1lu5m9cjqnyaqay0uc77t526qjtkx5qu8qxe8l2kqrflmagac3c8q7g8nu5"
-link_b_27 = "https://www.reddit.com/user/bdshahab"
+link_b_27 = "https://www.quora.com/profile/Shahab-Baradaran-Dilmaghani"
 link_b_28 = "https://rumble.com/c/c-1832445/videos"
 link_b_29 = "https://spoutible.com/bdshahab"
 link_b_30 = "https://steemit.com/@bdshahab"
@@ -117,7 +117,7 @@ def show_about(the_root):
         r"About\Photos\social media\pinterest.png",
         r"About\Photos\social media\primal.png",
         r"About\Photos\social media\producthunt.png",
-        r"About\Photos\social media\reddit.png",
+        r"About\Photos\social media\quora.png",
         r"About\Photos\social media\spoutible.png",
         r"About\Photos\social media\steemit.png",
         r"About\Photos\social media\telegram.png",
@@ -228,3 +228,4 @@ def show_about(the_root):
 
     top_level_window.resizable(False, False)
     center_window(top_level_window)
+
