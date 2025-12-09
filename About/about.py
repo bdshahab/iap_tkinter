@@ -6,42 +6,42 @@ from Payment.web_functions import GITHUB
 
 link_logo = "https://duckduckgo.com/?q=bdshahab"
 link_license = "https://opensource.org/license/mit"
-link_b_1 = "https://bdshahab.blogspot.com"
-link_b_2 = "https://bsky.app/profile/bdshahab.bsky.social"
-link_b_3 = "https://www.chess.com/member/bdshahab1982"
-link_b_4 = "https://app.clouthub.com/#/users/u/bdshahab"
-link_b_5 = "https://diamondapp.com/u/bdshahab"
-link_b_6 = "https://diasp.org/u/bdshahab"
+link_b_1 = "https://www.aparat.com/bdshahab"
+link_b_2 = "https://www.apsense.com/user/bdshahab"
+link_b_3 = "https://bdshahab.blogspot.com"
+link_b_4 = "https://bdshahab.blogix.ir"
+link_b_5 = "https://bsky.app/profile/bdshahab.bsky.social"
+link_b_6 = "https://diamondapp.com/u/bdshahab"
 link_b_7 = "https://discord.gg/xgMdTXBhnE"
-link_b_8 = "https://www.facebook.com/shahab.baradaran.dilmaghani"
-link_b_9 = "https://www.flickr.com/photos/bdshahab"
-link_b_10 = "https://flipboard.com/@bdshahab1982"
-link_b_11 = "https://gab.com/bdshahab"
-link_b_12 = "https://gettr.com/user/bdshahab"
+link_b_8 = "https://www.facebook.com/bdshahab1982"
+link_b_9 = "https://flipboard.com/@bdshahab1982"
+link_b_10 = "https://forem.com/bdshahab"
+link_b_11 = "https://gettr.com/user/bdshahab"
+link_b_12 = "https://hashnode.com/@bdshahab"
 link_b_13 = "https://www.instagram.com/bdshahab1982"
 link_b_14 = "https://bdshahab.itch.io"
 link_b_15 = "https://justpaste.it/u/bdshahab"
-link_b_16 = "https://lichess.org/@/bdshahab"
-link_b_17 = "https://www.linkedin.com/company/bdshahab"
-link_b_18 = "https://bdshahab1982.livejournal.com"
+link_b_16 = "https://www.linkedin.com/company/bdshahab"
+link_b_17 = "https://bdshahab1982.livejournal.com"
+link_b_18 = "https://lnk.bio/bdshahab"
 link_b_19 = "https://mastodon.social/@bdshahab"
 link_b_20 = "https://matrix.to/#/#bdshahab:matrix.org"
 link_b_21 = "https://bdshahab.medium.com"
 link_b_22 = "https://mewe.com/bdshahab"
 link_b_23 = "https://www.minds.com/bdshahab"
 link_b_24 = "https://odysee.com/@bdshahab"
-link_b_25 = "https://www.pinterest.com/bdshahab"
-link_b_26 = "https://primal.net/p/npub1lu5m9cjqnyaqay0uc77t526qjtkx5qu8qxe8l2kqrflmagac3c8q7g8nu5"
-link_b_27 = "https://www.quora.com/profile/Shahab-Baradaran-Dilmaghani"
-link_b_28 = "https://rumble.com/c/c-1832445/videos"
+link_b_25 = "https://app.parler.com/bdshahab"
+link_b_26 = "https://www.pinterest.com/bdshahab"
+link_b_27 = "https://primal.net/p/npub1lu5m9cjqnyaqay0uc77t526qjtkx5qu8qxe8l2kqrflmagac3c8q7g8nu5"
+link_b_28 = "https://www.producthunt.com/@bdshahab"
 link_b_29 = "https://spoutible.com/bdshahab"
 link_b_30 = "https://steemit.com/@bdshahab"
 link_b_31 = "https://t.me/bd_shahab"
-link_b_32 = "https://the-dots.com/users/shahab-baradaran-dilmaghani-1291359"
-link_b_33 = "https://www.threads.net/@bdshahab1982"
-link_b_34 = "https://www.tiktok.com/@bdshahab"
-link_b_35 = "https://bdshahab.tumblr.com"
-link_b_36 = "https://vk.com/bdshahab"
+link_b_32 = "https://www.threads.com/@bdshahab1982"
+link_b_33 = "https://www.tiktok.com/@bdshahab1982"
+link_b_34 = "https://bdshahab.tumblr.com"
+link_b_35 = "https://vk.com/bdshahab"
+link_b_36 = "https://whatsapp.com/channel/0029VbBIpNP1XquP4Lz4eZ3M"
 link_b_37 = "https://bdsh.wordpress.com"
 link_b_38 = "https://x.com/bdshahab"
 link_b_39 = "https://www.xing.com/profile/Shahab_BaradaranDilmaghani"
@@ -89,14 +89,14 @@ def show_about(the_root):
 
     # Define the icons and their positions
     icons = [
+        r"About\Photos\social media\aparat.png",
         r"About\Photos\social media\apsense.png",
         r"About\Photos\social media\blogger.png",
+        r"About\Photos\social media\blogix.png",
         r"About\Photos\social media\blue_sky.png",
-        r"About\Photos\social media\chess_com.png",
         r"About\Photos\social media\diamondapp.png",
         r"About\Photos\social media\discord.png",
         r"About\Photos\social media\facebook.png",
-        r"About\Photos\social media\flickr.png",
         r"About\Photos\social media\flipboard.png",
         r"About\Photos\social media\forem.png",
         r"About\Photos\social media\gettr.png",
@@ -104,9 +104,9 @@ def show_about(the_root):
         r"About\Photos\social media\instagram.png",
         r"About\Photos\social media\itch_io.png",
         r"About\Photos\social media\justpaste_it.png",
-        r"About\Photos\social media\lichess.png",
         r"About\Photos\social media\linkedin.png",
         r"About\Photos\social media\livejournal.png",
+        r"About\Photos\social media\lnk_bio.png",
         r"About\Photos\social media\Mastodon.png",
         r"About\Photos\social media\matrix.png",
         r"About\Photos\social media\medium.png",
@@ -117,7 +117,6 @@ def show_about(the_root):
         r"About\Photos\social media\pinterest.png",
         r"About\Photos\social media\primal.png",
         r"About\Photos\social media\producthunt.png",
-        r"About\Photos\social media\quora.png",
         r"About\Photos\social media\spoutible.png",
         r"About\Photos\social media\steemit.png",
         r"About\Photos\social media\telegram.png",
@@ -125,6 +124,7 @@ def show_about(the_root):
         r"About\Photos\social media\tiktok.png",
         r"About\Photos\social media\tumblr.png",
         r"About\Photos\social media\vk.png",
+        r"About\Photos\social media\whatsapp.png",
         r"About\Photos\social media\wordpress.png",
         r"About\Photos\social media\x.png",
         r"About\Photos\social media\xing.png",
@@ -132,10 +132,11 @@ def show_about(the_root):
     ]
 
     social_media = {
-        "apsense": "https://bdshahab.blogspot.com",
+        "aparat": "https://www.aparat.com/bdshahab",
+        "apsense": "https://www.apsense.com/user/bdshahab",
         "blogger": "https://bdshahab.blogspot.com",
+        "blogix": "https://bdshahab.blogix.ir",
         "blue_sky": "https://bsky.app/profile/bdshahab.bsky.social",
-        "chess_com": "https://www.chess.com/member/bdshahab1982",
         "diamondapp": "https://diamondapp.com/u/bdshahab",
         "discord": "https://discord.gg/xgMdTXBhnE",
         "facebook": "https://www.facebook.com/shahab.baradaran.dilmaghani",
@@ -147,9 +148,9 @@ def show_about(the_root):
         "instagram": "https://www.instagram.com/bdshahab1982",
         "itch_io": "https://bdshahab.itch.io",
         "justpaste_it": "https://justpaste.it/u/bdshahab",
-        "lichess": "https://lichess.org/@/bdshahab",
         "linkedin": "https://www.linkedin.com/company/bdshahab",
         "livejournal": "https://bdshahab1982.livejournal.com",
+        "lnk_bio": "https://lnk.bio/bdshahab",
         "Mastodon": "https://mastodon.social/@bdshahab",
         "matrix": "https://matrix.to/#/#bdshahab:matrix.org",
         "medium": "https://bdshahab.medium.com",
@@ -160,7 +161,6 @@ def show_about(the_root):
         "pinterest": "https://www.pinterest.com/bdshahab",
         "primal": "https://primal.net/p/npub1lu5m9cjqnyaqay0uc77t526qjtkx5qu8qxe8l2kqrflmagac3c8q7g8nu5",
         "producthunt": "https://primal.net/p/npub1lu5m9cjqnyaqay0uc77t526qjtkx5qu8qxe8l2kqrflmagac3c8q7g8nu5",
-        "quora": "https://www.quora.com/profile/Shahab-Baradaran-Dilmaghani",
         "spoutible": "https://spoutible.com/bdshahab",
         "steemit": "https://steemit.com/@bdshahab",
         "telegram": "https://t.me/bd_shahab",
@@ -168,6 +168,7 @@ def show_about(the_root):
         "tiktok": "https://www.tiktok.com/@bdshahab",
         "tumblr": "https://bdshahab.tumblr.com",
         "vk": "https://vk.com/bdshahab",
+        "whatsapp": "https://whatsapp.com/channel/0029VbBIpNP1XquP4Lz4eZ3M",
         "wordpress": "https://bdsh.wordpress.com",
         "x": "https://x.com/bdshahab",
         "xing": "https://www.xing.com/profile/Shahab_BaradaranDilmaghani",
