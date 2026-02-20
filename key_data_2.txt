@@ -1,0 +1,8 @@
+9
+1800
+{"Bitcoin (BTC)": "https://cryptorank.io/price/bitcoin", "Dogecoin (DOGE)": "https://cryptorank.io/price/dogecoin", "Ethereum (ETH)": "https://cryptorank.io/price/ethereum", "Litecoin (LTC)": "https://cryptorank.io/price/litecoin"}
+{"Bitcoin (BTC)": "0.00000001", "Dogecoin (DOGE)": "0.00000001", "Ethereum (ETH)": "0.000000000000000001", "Litecoin (LTC)": "0.00000001"}
+Price \$ ([0-9,]+\.?[0-9]*), Trading Volume
+https://unixtime.org
+([0-2][0-9]:[0-5][0-9]:[0-5][0-9])
+([0-9]{4}-[0-9]{2}-[0-9]{2})
